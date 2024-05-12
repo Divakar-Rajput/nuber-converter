@@ -1,144 +1,109 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  background: #0075ff;
 }
-.container{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    top: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
+.container {
+  background-color: #ffffff;
+  width: 80vmin;
+  max-width: 37.5em;
+  padding: 3em 2.5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.62em;
+  box-shadow: 0 1.2em 2.5em rgba(0, 21, 44, 0.18);
 }
-.container .box_container{
-    width: 30%;
-    height: 70%;
-    background-color:#a90604;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0.1px #000;
+h2 {
+  font-size: 1.8em;
+  color: #0075ff;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.3em;
 }
-.container .box_container .calculator{
-    width: 92%;
-    height: 92%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 4%;
 }
-h1{
-    font-size: 2.3vw;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
+.input-wrapper{
+  width: 48%;
 }
-.select_list{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
+.input-text{
+  width: 100%;
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  align-items: center;
 }
-.optionList{
-    width: 40%;
-    height: 5vh;
-    color: #000000;
-    border-radius: 10px;
-    text-align: center;
-    outline: none;
-    cursor: pointer;
-    margin: 2.5%;
-    font-size: 1.2vw;
-    background-color:#ffffff;
-    padding: 5px;
-    border: 2px solid #fff;
-    margin-top: 10%;
+.input-text h2{
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
-.optionList .option{
-    width: 100%;
-    color: #000000;
-    border-radius:0;
-    cursor: pointer;
-    background-color: #f5f5f5;
+input, button {
+  position: relative;
+  font-size: 1.1em;
+  width: 100%;
+  margin: auto;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  text-transform: uppercase;
+  border: 1.5px solid #43405c;
+  color: #43405c;
+  outline: none;
 }
-input, input::placeholder{
-    width: 85%;
-    height: 5vh;
-    background-color: #fff;
-    border-radius: 10px;
-    color: #000000;
-    padding: 10px;
-    font-size: 1.1vw;
-    outline: none;
+button{
+  font-size: large;
+  text-transform: uppercase;
+  background-color: #0800ff;
+  color: #ffffff;
+  outline: none;
+  transition: .5s;
 }
-input{
-    margin-top: 10%;
+button:hover{
+  background-color: #3734a0;
+  cursor: pointer;
 }
-span{
-    width: 50%;
-    height: auto;
-    padding:10px;
-    cursor: pointer;
-    text-align: center;
-    outline: none;
-    font-size: 1.2vw;
-    color: #fff;
-    margin-top: 10%;
-    background-color: rgb(0, 0, 0);
+.outputlist, .inputlist{
+  position: relative;
+  font-size: 1.1em;
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  border: 1.5px solid #43405c;
+  color: #43405c;
+  outline: none;
+
 }
-span:hover{
-    background-color: rgb(34, 33, 33);
+input:focus {
+  border-color: #0075ff;
 }
-.output{
-    width: 80%;
-    margin-top: 10%;
-    padding: 10px;
-    text-align: center;
-    color: #000;
-    border-radius: 10px;
-    background-color: #efeded;
+.error-msg {
+  text-align: center;
+  margin-top: 1.25em;
+  color: #ff0000;
+  text-transform: capitalize !important;
+  animation: shake 0.5s;
 }
-.output h1{
-   color: #000;
-}
-h2{
-    color: #000000;
-}
-@media screen and (max-width: 900px){
-    .container .box_container{
-        width: 60%;
-    }
-    .optionList{
-        font-size: 2vw;
-    }
-    input, input::placeholder{
-        font-size: 2vw;
-    }
-    .output h1{
-       font-size: 6vw;
-     }
-}
-@media screen and (max-width: 468px){
-    .container .box_container{
-        width: 100%;
-    }
-    .optionList{
-        font-size: 4vw;
-    }
-    input, input::placeholder{
-        font-size: 4vw;
-    }
-    .output h1{
-       font-size: 6vw;
-     }
-     .output{
-        width: 100%;
-     }
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }

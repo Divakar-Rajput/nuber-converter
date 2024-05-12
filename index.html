@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number System</title>
-    <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Converter</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <h1 style="color: #000;">Number Conversion by Divakar Rajput</h1>
-    <div class="container">
-        <div class="box_container">
-            <div class="calculator">
-                <div class="select_list">
-                    <select class="optionList" name="inputList" id="inputtext">
-                        <option class="option" value="decimal">Decimal</option>
-                        <option class="option" value="binary">Binary</option>
-                        <option class="option" value="octal">Octal</option>
-                        <option class="option" value="hexadecimal">Hexadecimal</option>
-                    </select>
-                    <select class="optionList" name="outputtList" id="output">
-                        <option class="option" value="binary">Binary</option>
-                        <option class="option" value="decimal">Decimal</option>
-                        <option class="option" value="octal">Octal</option>
-                        <option class="option" value="hexadecimal">Hexadecimal</option>
-                    </select>
-                </div>
-                <input type="text" placeholder="Enter Your Number" id="myinput">
-                <span onclick="convert()">Convert</span>
-                <div class="output">
-                    <h2>Output</h2>
-                    <h1 id="outputText">00</h1>
-                </div>
-                            
-            </div>            
-        </div>
+  <div class="container">
+    <h2>Number Converter</h2>
+    <div class="wrapper">
+      <div class="input-wrapper">
+        <select class="inputlist" id="inputtext">
+          <option value="hide">-- Select--</option>
+          <option value="decimal">Decimal</option>
+          <option value="binary">Binary</option>
+          <option value="octal">Octal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+        </select>
+      </div>
+      <div class="input-wrapper">
+        <select class="outputlist" id="output">
+          <option value="hide">-- Select--</option>
+          <option value="decimal">Decimal</option>
+          <option value="binary">Binary</option>
+          <option value="octal">Octal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+        </select>
+      </div>
     </div>
-    <script src="main.js"></script>
+    <div class="input-text">
+      <input type="text" placeholder="Enter Number..." id="myinput">
+    </div>
+    <div class="input-text">
+      <button onclick="calculate()">submit</button>
+    </div>
+    <p>Answer :</p>
+    <div class="input-text">
+      <h2 id="outputText">00</h2>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
