@@ -4,9 +4,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   background: #0075ff;
 }
+
 .container {
   background-color: #ffffff;
   width: 80vmin;
@@ -19,6 +21,7 @@ body {
   border-radius: 0.62em;
   box-shadow: 0 1.2em 2.5em rgba(0, 21, 44, 0.18);
 }
+
 h2 {
   font-size: 1.8em;
   color: #0075ff;
@@ -27,6 +30,7 @@ h2 {
   letter-spacing: 0.5px;
   margin-bottom: 1.3em;
 }
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -34,22 +38,27 @@ h2 {
   margin-bottom: 20px;
   gap: 4%;
 }
-.input-wrapper{
+
+.input-wrapper {
   width: 48%;
 }
-.input-text{
+
+.input-text {
   width: 100%;
   display: flex;
   margin: auto;
   margin-bottom: 20px;
   align-items: center;
 }
-.input-text h2{
+
+.input-text h2 {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
 }
-input, button {
+
+input,
+button {
   position: relative;
   font-size: 1.1em;
   width: 100%;
@@ -61,7 +70,8 @@ input, button {
   color: #43405c;
   outline: none;
 }
-button{
+
+button {
   font-size: large;
   text-transform: uppercase;
   background-color: #0800ff;
@@ -69,11 +79,14 @@ button{
   outline: none;
   transition: .5s;
 }
-button:hover{
+
+button:hover {
   background-color: #3734a0;
   cursor: pointer;
 }
-.outputlist, .inputlist{
+
+.outputlist,
+.inputlist {
   position: relative;
   font-size: 1.1em;
   width: 100%;
@@ -82,11 +95,12 @@ button:hover{
   border: 1.5px solid #43405c;
   color: #43405c;
   outline: none;
-
 }
+
 input:focus {
   border-color: #0075ff;
 }
+
 .error-msg {
   text-align: center;
   margin-top: 1.25em;
@@ -94,26 +108,81 @@ input:focus {
   text-transform: capitalize !important;
   animation: shake 0.5s;
 }
+
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-@media screen and (max-width:768px){
-  .container{
-    widht:100%;
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+
 @media screen and (max-width: 768px) {
-  .container{
-    widht:100% !important;
+  .container {
+    width: 97% !important;
   }
+
+  h2 {
+    font-size: 7vw;
+  }
+
+  .input-text h2 {
+    font-size: 6vw !important;
+    width: 100%;
+  }
+
+  .input-text {
+    width: 250px;
+    height: auto;
+    overflow: auto;
+  }
+
+  .outputlist,
+  .inputlist {
+    font-size: 4vw;
+  }
+
+  input,
+  button {
+    font-size: 4vw;
+  }
+
 }
