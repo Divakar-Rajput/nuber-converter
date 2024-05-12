@@ -112,3 +112,8 @@ input:focus {
     widht:100%;
   }
 }
+@media screen and (max-width: 768px) {
+  .container{
+    widht:100% !important;
+  }
+}
